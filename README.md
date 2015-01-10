@@ -41,7 +41,8 @@ RoboTool can be ran from the command line or by dropping a CSV file onto the rob
 
 ## Configuration
 
-The following variables can be configured in the section labelled **:vars**
+The following user configurable variables can be set in the section labelled **:vars**
+
 Default options are shown below. See Robocopy help for more options.
 
 ### Setting Options

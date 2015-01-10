@@ -25,6 +25,11 @@ RoboTool is a batch file which uses Microsoft Robocopy to replicate a list of di
 	Usage: robotool  <CSV file>
 	CSV file - Comma Separated Values of SOURCE,DESTINATION paths. One per line.
 
+### Examples:
+
+	robotool mylist.csv 
+	robotool *.csv
+	
 ### Sample CSV:
 
 The following sample would replicate Music and Pictures folders from C:\Data to D:\Backup
@@ -32,16 +37,11 @@ The following sample would replicate Music and Pictures folders from C:\Data to 
 	C:\Data\Music,D:\Backup\Music
 	C:\Data\Pictures,D:\Backup\Pictures
 
-### Examples:
-
-	robotool mylist.csv 
-	robotool *.csv
-
 RoboTool can be ran from the command line or by dropping a CSV file onto the robotool batch file in Windows.
 
 ## Configuration
 
-The following variables can be configured in the section labelled :vars 
+The following variables can be configured in the section labelled **:vars**
 Default options are shown below. See Robocopy help for more options.
 
 ### Setting Options
@@ -52,13 +52,13 @@ Default options are shown below. See Robocopy help for more options.
 
 ## Notes
 
-A General Warning...
+### A General Warning
 While this file has been tested, please keep in mind that Robocopy can delete data and things can go wrong!
 The /MIRror option is turned on by default which DELETES any files on DESTINATION that are not in the SOURCE.
 Using the /L (list only -- do not copy) option first may be wise until you're sure everything looks right.
 See CONFIGURATION section above for setting options.
 
-A note about Drag/Drop....
+### A note about Drag/Drop
 Drag/Drop with batch files is known to cause issues with certain file names (special chars).
 Most file names should work fine (including those with spaces).
 Dropping multiple CSV files in not supported. 

@@ -21,8 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 RoboTool is a batch file which uses Microsoft Robocopy to replicate a list of directories in a CSV file.
 
 ## Usage
-Usage: robotool  <CSV file>
-  CSV file - Comma Separated Values of SOURCE,DESTINATION paths. One per line.
+
+	Usage: robotool  <CSV file>
+	CSV file - Comma Separated Values of SOURCE,DESTINATION paths. One per line.
 
 ### Sample CSV:
 

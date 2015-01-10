@@ -1,4 +1,6 @@
+## About
 RoboTool -- Use Robocopy to replicate a list of directories in a CSV file.
+
 Copyright (C) 2015 Dan MacCormac <info@danmac.co>
 
 This program is free software: you can redistribute it and/or modify
@@ -15,44 +17,43 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
----------
-OVERVIEW
----------
+## Overview
 RoboTool is a batch file which uses Microsoft Robocopy to replicate a list of directories in a CSV file.
 
-------
-USAGE
-------
+## Usage
 Usage: robotool  <CSV file>
   CSV file - Comma Separated Values of SOURCE,DESTINATION paths. One per line.
 
-Sample CSV:
-C:\Data\Music,D:\Backup\Music
-C:\Data\Pictures,D:\Backup\Pictures
+### Sample CSV:
 
-Examples:
-robotool mylist.csv 
-robotool *.csv
+The following sample would replicate Music and Pictures folders from C:\Data to D:\Backup
+
+	C:\Data\Music,D:\Backup\Music
+	C:\Data\Pictures,D:\Backup\Pictures
+
+### Examples:
+
+	robotool mylist.csv 
+	robotool *.csv
 
 RoboTool can be ran from the command line or by dropping a CSV file onto the robotool batch file in Windows.
 
--------------
-CONFIGURATION
--------------
+## Configuration
 
 The following variables can be configured in the section labelled :vars 
 Default options are shown below. See Robocopy help for more options.
 
-set robocopy=%windir%\System32\Robocopy.exe
-set args=/MIR
+### Setting Options
+
+	set robocopy=%windir%\System32\Robocopy.exe
+	set args=/MIR
 
 
-------
-NOTES
-------
+## Notes
 
 A General Warning...
 While this file has been tested, please keep in mind that Robocopy can delete data and things can go wrong!
+The /MIRror option is turned on by default which DELETES any files on DESTINATION that are not in the SOURCE.
 Using the /L (list only -- do not copy) option first may be wise until you're sure everything looks right.
 See CONFIGURATION section above for setting options.
 

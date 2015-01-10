@@ -1,7 +1,7 @@
 @echo off
 
 : ABOUT
-: RoboTool 1.0 -- http://danmac.co/robotool
+: RoboTool 1.0 -- http://go.danmac.co/robotool
 : Use Robocopy to replicate a list of directories in a CSV file.
 : Parameters: CSV file - Comma Separated Values of SOURCE,DESTINATION paths. One per line.
 : Usage: robotool.bat mylist.csv
@@ -29,7 +29,7 @@
 
 
 :vars
-set whoami=RoboTool 1.0  http://danmac.co/robotool
+set whoami=RoboTool 1.0  http://go.danmac.co/robotool
 set robocopy=%windir%\System32\Robocopy.exe
 set args=/MIR /L
 

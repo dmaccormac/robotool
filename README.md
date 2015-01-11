@@ -56,7 +56,7 @@ See CONFIGURATION section above for more information.
 
 ### A note about Drag/Drop
 Most file names should work fine (including those with spaces).
-Dropping multiple CSV files in not supported. 
+Dropping multiple CSV files is not supported. 
 
 
 

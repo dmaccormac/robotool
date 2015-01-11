@@ -74,5 +74,3 @@ echo Sample CSV:
 echo C:\Data\Music,D:\Backup\Music
 echo C:\Data\Pictures,D:\Backup\Pictures
 goto :EOF
-
-

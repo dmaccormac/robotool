@@ -1,5 +1,5 @@
 ## About
-RoboTool -- Use Robocopy to replicate a list of directories in a CSV file.
+RoboTool 1.0 -- Use Robocopy to replicate a list of directories in a CSV file.
 
 Copyright (C) 2015 Dan MacCormac <info@danmac.co>
 

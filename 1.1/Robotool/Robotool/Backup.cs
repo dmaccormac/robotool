@@ -66,11 +66,11 @@ namespace Robotool
          * Method Name: Start()
          * Description: Use Process.Start() to execute backup job
          * Parameters: none
-         * Returns: Command String
+         * Returns: Bool - result of Process.Start
          * */
-        public string Start()
+        public bool Start()
         {
-            string s;
+            bool result;
 
 
             var p = new Process();
@@ -82,19 +82,20 @@ namespace Robotool
 
             try
             {
-                p.Start();
+                result = p.Start();
                 p.WaitForExit();
-                s = Command + " " + Parameters + " \"" + Source + "\" \"" + Dest + "\"";
             }
 
             catch (Exception e)
             {
-                s = "Caught exception: " + e.ToString();
+               Console.WriteLine("Caught exception: " + e.ToString());
+               result = false;
+               
             }
 
 
 
-            return (s);
+            return (result);
 
         }
 

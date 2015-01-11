@@ -31,60 +31,87 @@ namespace Robotool
          * */
 
 
-        static void Main(string[] args) //Takes path to CSV file as parameter
+
+        static int Main(string[] args) //Takes path to CSV file as parameter
         {
-            
             string Description = @"Robotool 1.1 http://go.danmac.co/robotool";
-            string Command = Environment.GetFolderPath(Environment.SpecialFolder.Windows) + @"\System32\Robocopy.exe";
-            String Parameters = "/MIR";
+            Console.WriteLine(Description);
 
-            //open CSV file
-            var reader = new StreamReader(File.OpenRead(args[0])); //args[0] is path to csv file 
-
-            //Create lists for source and dest strings
-            List<string> Source = new List<string>();
-            List<string> Dest = new List<string>();
-
-            //Parse CSV file
-            while (!reader.EndOfStream)
+            if (args.Length == 1)
             {
-                              
-                string line = reader.ReadLine();
-                if (line != "")
-                {  
-                    var values = line.Split(','); 
-                    Source.Add(values[0].Trim()); 
-                    Dest.Add(values[1].Trim());
+               
+                string Command = Environment.GetFolderPath(Environment.SpecialFolder.Windows) + @"\System32\Robocopy.exe";
+                String Parameters = "/MIR";
+
+                //open CSV file
+                var reader = new StreamReader(File.OpenRead(args[0])); //args[0] is path to csv file 
+
+                //Create lists for source and dest strings
+                List<string> Source = new List<string>();
+                List<string> Dest = new List<string>();
+
+                //Parse CSV file
+                while (!reader.EndOfStream)
+                {
+
+                    string line = reader.ReadLine();
+                    if (line != "")
+                    {
+                        var values = line.Split(',');
+                        Source.Add(values[0].Trim());
+                        Dest.Add(values[1].Trim());
+                    }
+
                 }
 
+                //Create the List of type 'Backup' and populate each item
+                List<Backup> Backups = new List<Backup>();
+
+                for (int i = 0; i < Source.Count; i++)
+                {
+                    Backups.Add(new Backup(Command, Parameters, Source[i], Dest[i]));
+
+                }
+
+
+                //Start each Backup Item withn Backups
+                foreach (Backup b in Backups)
+                {
+                    b.Start();
+
+
+                }
+
+
+                //Summary on exit
+                Console.WriteLine("\n"
+                    + "\nProcessed total of " + Backups.Count + " backup items."
+                    + "\nPress any key to exit...");
+
+                Console.ReadKey(true);
+                return (0);
+
+
             }
 
-            //Create the List of backups and populate each item
-            List<Backup> Backups = new List<Backup>();
-
-            for (int i = 0; i < Source.Count; i++)
+            else
             {
-                Backups.Add(new Backup(Command, Parameters, Source[i], Dest[i]));
+                string usage = "Use Robocopy to replicate a list of directories in a CSV file."
+                               + "\n\nUsage: robotool.exe <CSV file>"
+                                + "\n\tCSV file - Comma Separated Values of SOURCE,DEST paths. One per line."
+                                + "\n\nExample: robotool.exe mylist.csv"
+                                + "\n\nSample CSV:"
+                                + "\n" + @"C:\Data\Music,D:\Backup\Music"
+                                + "\n" + @"C:\Data\Pictures,D:\Backup\Pictures";
+
+                Console.WriteLine(usage);
+
+                Console.WriteLine("\nPress any key to exit...");
+                Console.ReadKey(true);
+                return (-1);
 
             }
 
-
-            //Start each Backup Item withn Backups
-            foreach (Backup b in Backups)
-            {
-                Console.WriteLine(b.Start());
-                
-                
-            }
-
-
-            //Summary on exit
-            Console.WriteLine("\n\n" 
-                + Description 
-                + "\nProcessed " + Backups.Count + " backup items."
-                + "\nPress any key to exit...");
-
-            Console.ReadKey(true);
 
 
         }

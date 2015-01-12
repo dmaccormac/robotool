@@ -18,7 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 ## Overview
-RoboTool is a batch file which uses Microsoft Robocopy to replicate a list of directories in a CSV file.
+RoboTool is a program to mirror a list of directories specified in one or more CSV files. 
+It uses Microsoft Robocopy to replicate the directories. It is written in C# and uses the NET 4.5 framework.
 
 ## Usage
 
@@ -44,7 +45,7 @@ RoboTool can be ran from the command line or by dropping a CSV file onto the rob
 
 The following user configurable variables can be set in Program.cs
 
-	string Command = ... @"\System32\Robocopy.exe";
+	string Command = ... "Robocopy.exe";
     String Parameters = "/MIR";
 
 ## Notes

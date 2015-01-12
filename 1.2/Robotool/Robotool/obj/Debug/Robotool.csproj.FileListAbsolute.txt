@@ -1,0 +1,9 @@
+c:\users\dan\documents\visual studio 2013\Projects\Robotool\Robotool\bin\Debug\Robotool.exe.config
+c:\users\dan\documents\visual studio 2013\Projects\Robotool\Robotool\bin\Debug\Robotool.exe
+c:\users\dan\documents\visual studio 2013\Projects\Robotool\Robotool\bin\Debug\Robotool.pdb
+c:\users\dan\documents\visual studio 2013\Projects\Robotool\Robotool\obj\Debug\Robotool.exe
+c:\users\dan\documents\visual studio 2013\Projects\Robotool\Robotool\obj\Debug\Robotool.pdb
+C:\Users\dan\Documents\Visual Studio 2013\Projects\Robotool\Robotool\bin\Debug\Robotool.exe.manifest
+C:\Users\dan\Documents\Visual Studio 2013\Projects\Robotool\Robotool\bin\Debug\Robotool.application
+C:\Users\dan\Documents\Visual Studio 2013\Projects\Robotool\Robotool\obj\Debug\Robotool.exe.manifest
+C:\Users\dan\Documents\Visual Studio 2013\Projects\Robotool\Robotool\obj\Debug\Robotool.application

@@ -3,7 +3,7 @@ RoboTool 1.2 -- Use Robocopy to replicate a list of directories in specified CSV
 
 Copyright (C) 2015 Dan MacCormac <info@danmac.co>
 
-This program is free software: you can redistribute it and/or modify
+This program is free software: you can redistribute it and/or modify 
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
@@ -20,6 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ## Overview
 RoboTool is a program to mirror a list of directories specified in one or more CSV files. 
 It uses Microsoft Robocopy to replicate the directories. It is written in C# and uses the NET 4.5 framework.
+
+## Installation
+-Download the latest version of Robotool at https://github.com/dmaccormac/robotool/releases
+-Unpack the setup files and run setup.exe
+-You can add Robotool installation directory to your system PATH variable by determining the installation directory of Robotool using Window TaskManager.
+
+Robotool can be uninstalled in 'Programs and Features' in Control Panel.
 
 ## Usage
 

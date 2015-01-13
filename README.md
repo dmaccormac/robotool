@@ -22,11 +22,11 @@ RoboTool is a program to mirror a list of directories specified in one or more C
 It uses Microsoft Robocopy to replicate the directories. It is written in C# and uses the NET 4.5 framework.
 
 ## Installation
--Download the latest version of Robotool at https://github.com/dmaccormac/robotool/releases
--Unpack the setup files and run setup.exe
--You can add Robotool installation directory to your system PATH variable by determining the installation directory of Robotool using Window TaskManager.
+1.Download the latest version of Robotool at https://github.com/dmaccormac/robotool/releases
+2.Unpack the setup files and run setup.exe
+3. You can add Robotool installation directory to your system PATH variable by determining the installation directory of Robotool using Window TaskManager.
 
-Robotool can be uninstalled in 'Programs and Features' in Control Panel.
+Robotool can be uninstalled via 'Programs and Features' in Control Panel.
 
 ## Usage
 
